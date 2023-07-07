@@ -7,7 +7,7 @@ body {
   font-size: 50px; /* Increase or decrease the base font size */
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body {
     font-size: 100px; /* Increase the base font size for phone devices */
   }
