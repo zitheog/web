@@ -67,7 +67,7 @@ h2 {
 
 .food-item select {
   padding: 5px;
-  font-size: 16px; /* Increase the select font size */
+  font-size: inherit; /* Adjust the font size to inherit from parent */
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
@@ -158,5 +158,11 @@ h3 {
   100% {
     opacity: 0.1;
     transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  #menu {
+    font-size: 16px; /* Adjust the menu font size for smaller devices */
   }
 }
