@@ -7,10 +7,15 @@ body {
   font-size: 50px; /* Increase or decrease the base font size */
 }
 
+@media (max-width: 600px) {
+  body {
+    font-size: 100px; /* Increase the base font size for phone devices */
+  }
+}
 
 #header {
   text-align: center;
-  background-color: #fff;
+  background-color: #333;
   color: #fff;
   padding: 20px;
 }
@@ -116,4 +121,8 @@ h3 {
   font-weight: bold;
 }
 
-
+@media (max-width: 600px) {
+  body {
+    font-size: 100px; /* Increase the base font size for phone devices */
+  }
+}
