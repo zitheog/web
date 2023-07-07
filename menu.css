@@ -4,7 +4,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
-  font-size: 16px; /* Increase or decrease the base font size */
+  font-size: 50px; /* Increase or decrease the base font size */
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 100px; /* Increase the base font size for phone devices */
+  }
 }
 
 #header {
@@ -16,23 +22,23 @@ body {
 
 h1 {
   margin: 0;
-  font-size: 32px; /* Increase the heading font size */
+  font-size: 100px; /* Increase the heading font size */
 }
 
 p {
   margin: 0;
-  font-size: 18px; /* Increase the paragraph font size */
+  font-size: 20px; /* Increase the paragraph font size */
   opacity: 0.8;
 }
 
 .discount {
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   background-color: #fff;
 }
 
 .discount label {
-  font-size: 18px; /* Increase the label font size */
+  font-size: 25px; /* Increase the label font size */
 }
 
 #menu {
@@ -45,7 +51,7 @@ p {
 }
 
 h2 {
-  font-size: 28px; /* Increase the category heading font size */
+  font-size: 70px; /* Increase the category heading font size */
   margin: 10px 0;
 }
 
@@ -82,7 +88,7 @@ h2 {
 }
 
 .food-item select option {
-  font-size: 14px;
+  font-size: 30px;
 }
 
 .bill-container {
@@ -91,12 +97,12 @@ h2 {
 }
 
 h3 {
-  font-size: 22px; /* Increase the bill heading font size */
+  font-size: 30px; /* Increase the bill heading font size */
 }
 
 #bill {
   margin-bottom: 10px;
-  font-size: 18px; /* Increase the bill text font size */
+  font-size: 25px; /* Increase the bill text font size */
 }
 
 .fixed-total {
@@ -107,58 +113,12 @@ h3 {
   padding: 10px;
   background-color: #333;
   color: #fff;
-  font-size: 20px; /* Increase the fixed total font size */
+  font-size: 50px; /* Increase the fixed total font size */
   text-align: center;
 }
 
 #total-amount-value {
   font-weight: bold;
-}
-
-/* Additional Styles for Food and Mountains with Animation */
-#food-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.1;
-  background-image: url('food-image.jpg'); /* Replace 'food-image.jpg' with the actual path to your food image */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  animation: fadeEffect 20s linear infinite;
-}
-
-#mountain-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-  opacity: 0.05;
-  background-image: url('mountain-image.jpg'); /* Replace 'mountain-image.jpg' with the actual path to your mountain image */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  animation: fadeEffect 30s linear infinite;
-}
-
-@keyframes fadeEffect {
-  0% {
-    opacity: 0.1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.05;
-    transform: scale(1.1);
-  }
-  100% {
-    opacity: 0.1;
-    transform: scale(1);
-  }
 }
 
 @media (max-width: 600px) {
