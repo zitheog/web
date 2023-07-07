@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zi Cafe - Fast Food Restaurant</title>
+  <link rel="stylesheet" href="menu.css">
+
+</head>
+<body>
+  <div id="header">
+    <h1>Zi Cafe</h1>
+    <p>Fast Food Restaurant</p>
+  </div>
+
+  <div class="discount">
+    <label for="discount-checkbox">
+      <input type="checkbox" id="discount-checkbox" onchange="updateTotal()"> Apply 10% Discount
+    </label>
+  </div>
+
+  <div id="menu">
+    <!-- Menu items here -->
+  
+
+
+
+
+
+
+
+
+
+
+  <div id="menu">
+
+
+
+
+
+
+
+<hr>
+
+    <div class="category">
+      <h2>Beverages</h2>
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Hot Coffee</span>
+        <span class="price">50</span>
+      </div>
+    
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Black Coffee</span>
+        <span class="price">40</span>
+      </div>
+
+    
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Masala Tea</span>
+        <span class="price">20</span>
+      </div>
+
+
+    
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Black Tea</span>
+        <span class="price">15</span>
+      </div>
+
+
+    
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Tea</span>
+        <span class="price">15</span>
+      </div>
+
+
+
+    
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Milk</span>
+        <span class="price">40</span>
+      </div>
+
+
+    
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Cold Coffee</span>
+        <span class="price">60</span>
+      </div>
+
+ 
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Lemon Water</span>
+        <span class="price">20</span>
+      </div>
+   
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Kit Kat Shake</span>
+        <span class="price">60</span>
+      </div>
+ 
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Oreo Shake</span>
+        <span class="price">70</span>
+      </div>
+
+    
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Chocolate Shake</span>
+        <span class="price">70</span>
+      </div>
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Strawbettr Shake</span>
+        <span class="price">60</span>
+      </div>
+
+    
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Banana Shake</span>
+        <span class="price">60</span>
+      </div>
+
+ 
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Lassi</span>
+        <span class="price">30</span>
+      </div>
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Kulhad Tea</span>
+        <span class="price">30</span>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+
+
+    <div class="category">
+      <h2>Snacks</h2>
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Kulcha</span>
+        <span class="price">90</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Cheese Kulcha</span>
+        <span class="price">120</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Sandwich</span>
+        <span class="price">40</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Grild Sandwich</span>
+        <span class="price">60</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Cheese Sandwich</span>
+        <span class="price">60</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Burger</span>
+        <span class="price">35</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Cheese Burger</span>
+        <span class="price">50</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Double tiki burger</span>
+        <span class="price">50</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Plain Maggie</span>
+        <span class="price">40</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Panner Maggie</span>
+        <span class="price">60</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Cheese veg Maggie</span>
+        <span class="price">70</span>
+      </div>  
+
+
+
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <span class="food">Chole bhature kulcha</span>
+        <span class="price">100</span>
+      </div>  
+
+
+
+
+
+<hr>
+
+
+
+
+</div>
+
+  <div class="bill-container">
+    <h3>Show this on Counter</h3>
+    <div id="bill"></div>
+    <p>Discount Applied: <span id="discount-amount">0.00</span></p>
+    <p>Total Amount: <span id="total-amount">0.00</span> Only</p>
+  </div>
+
+  <div id="total-amount" class="fixed-total">
+    Total: <span id="total-amount-value">0.00</span> Rupees
+  </div>
+
+
+
+  <script src="menu.js"></script>
+</body>
+</html>

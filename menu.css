@@ -1,0 +1,69 @@
+ body {
+  background-color: #331E05;
+  color: #EEAD30;
+  font-family: Arial, sans-serif;
+}
+
+#header {
+  text-align: center;
+  padding: 20px;
+  animation: fade-in 2s;
+}
+
+#header h1 {
+  margin: 0;
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  animation: slide-down 1s;
+}
+
+#menu {
+  margin-top: 50px;
+  animation: fade-in 2s;
+}
+
+.category {
+  margin-top: 20px;
+}
+
+.food-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.food-item select {
+  margin-right: 10px;
+}
+
+.bill-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #EEAD30;
+  color: #331E05;
+  max-height: auto;
+  overflow-y: auto;
+}
+
+.fixed-total {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #EEAD30;
+  color: #331E05;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slide-down {
+  0% { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
