@@ -7,22 +7,70 @@
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
     body {
-      background-color: #331E05;
+      background-color: #321D05;
       color: #EEAD30;
       font-family: Arial, sans-serif;
+      font-size: 50px; /* Increased text size */
     }
 
     #header {
       text-align: center;
       padding: 20px;
       animation: fade-in 2s;
+      background-color: #FFA33E; /* Coloured box background */
+      position: relative;
     }
 
     #header h1 {
       margin: 0;
-      font-size: 48px;
+      font-size: 100px;
       font-family: 'Playfair Display', serif;
       animation: slide-down 1s;
+      color: #FFF;
+    }
+
+    #header h5 {
+      margin: 0;
+      font-size: 30px;
+      font-family: 'Playfair Display', serif;
+      animation: slide-down 1s;
+      color: #321D05;
+    }
+
+    #header h4 {
+      margin: 0;
+      font-size: 30px;
+      font-family: 'Playfair Display', serif;
+      animation: slide-down 1s;
+      color: #321D05;
+    }
+
+    #header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #FFA33E; /* Added colored line on top */
+    }
+
+    #header img.left-image {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      width: 150px;
+      height: 150px;
+    }
+
+    #header img.right-image {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 150px;
+      height: 150px;
     }
 
     #buttons {
@@ -31,21 +79,33 @@
       animation: slide-up 1s;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 0 10px;
-      background-color: #EEAD30;
-      color: #331E05;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
 
-    .btn:hover {
-      background-color: #FFC857;
-    }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #CDE2FA;
+    color: #321D05;
+    border: 2;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #EEAD30;
+    transform: scale(1.05);
+  }
+
+  .button:active {
+    background-color: #FFC857;
+    transform: scale(0.95);
+  }
+
+
 
     /* Animations */
     @keyframes fade-in {
@@ -62,20 +122,119 @@
       0% { transform: translateY(50px); }
       100% { transform: translateY(0); }
     }
+
+.fixed-total {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #EEAC31;
+  color: #EEAC31;
+  font-size: 70px; /* Increase the fixed total font size */
+  text-align: center;
+}
+
+
+
+  .rounded-image {
+    border-radius: 5%;
+    border: 2px solid #EEAD30;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .rounded-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .rounded-image:hover::before {
+    opacity: 1;
+  }
+
+
+
   </style>
 </head>
 <body>
   <div id="header">
+    <img src="left-image.png" alt="Left Image" class="left-image">
     <h1>Zi Cafe</h1>
-    <p>Fast Food Restaurant</p>
+    <img src="right-image.png" alt="Right Image" class="right-image">
   </div>
+  <div id="header">
+    <h5>Fast Food Reasturant</h5>
+ </div>
+<center>
+<p style="font-size: 40px; line-height: 0.1; color: #FFA33E; font-family: Times New Roman;" >Now in Your City</p>
+<p style="font-size: 50px; line-height: 1; color: white; font-family: Times New Roman;" >-THEOG-</p>
+
 
   <div id="buttons">
-    <a class="btn" href="https://www.google.com/maps/place/Zi+Cafe/@31.1193618,77.3579883,65m/data=!3m1!1e3!4m6!3m5!1s0x39058574dce16f21:0x944164ff9052ec2a!8m2!3d31.1193156!4d77.3579228!16s%2Fg%2F11kqfmrr0m?entry=ttu">Visit us on Google Maps</a>
-    <a class="btn" href="https://www.instagram.com/zi_cafe_theog/">Follow us on Instagram</a>
-    <hr>
-    <a class="btn" href="https://zitheog.github.io/web/menu">Special Day Menu</a>
+    <a class="button" href="https://www.google.com/maps/place/Zi+Cafe/@31.1193618,77.3579883,65m/data=!3m1!1e3!4m6!3m5!1s0x39058574dce16f21:0x944164ff9052ec2a!8m2!3d31.1193156!4d77.3579228!16s%2Fg%2F11kqfmrr0m?entry=ttu">Visit us Through Google Maps</a>
+<br><br>
+<p style="font-size: 120px; line-height: 0.001; color: #FFA33E; font-family: Times New Roman;" >OPENING!</p> 
+<p style="font-size: 25px; line-height: 0.1; color: #FFA33E; font-family: Times New Roman;" >Save the Date</p>
+
+  <div id="header">
+    <h4>Tuesday, 11th July 2023</h4>
+ </div>
+<p style="font-size: 15px; line-height: 0.5; color: #FFA33E; font-family: Times New Roman;" >College Road, New Bypass, Premghat THEOG</p>
+
+
+
+<br><br>
+<p style="font-size: 30px; line-height: 0.1; color: white; font-family: Times New Roman;" >Buy one Pizza and get another Pizza for</p>
+<p style="font-size: 90px; line-height: 0.1; color: white; font-family: Arial Rounded MT;" >Free! Free! Free!</p><hr><hr>
+<p style="font-size: 40px; line-height: 0.1; color: #CDE2FA; font-family: Times New Roman;" >Check out the List of food items</p>
+    <a class="button" href="https://zitheog.github.io/web/menu">Special Menu</a>
+</center>
+
+
+
+<ul>
+  <li><p style="font-size: 15px; line-height: 1; color: #FFA33E; font-family: Arial Rounded MT;" >10% Discount for all students (for first one month, excluding the Special Day)</p></li>
+  <li><p style="font-size: 15px; line-height: 1; color: #FFA33E; font-family: Arial Rounded MT;" >Take FREE photos from DSLR camera for your Instgram.</p></li>
+  <li><p style="font-size: 15px; line-height: 1; color: #FFA33E; font-family: Arial Rounded MT;" >Candle light Dinner</p></li>
+  <li><p style="font-size: 15px; line-height: 1; color: #FFA33E; font-family: Arial Rounded MT;" >Special Area for Enjoying Birthday Party with Friends</p></li>
+  <li><p style="font-size: 15px; line-height: 1; color: #FFA33E; font-family: Arial Rounded MT;" >Enjoy food with your favourite Music</p></li>
+  <li><p style="font-size: 15px; line-height: 1; color: #FFA33E; font-family: Arial Rounded MT;" >Home Dilivary Avilable in Theog City (Places near NH)</p></li>
+  <li><p style="font-size: 15px; line-height: 1; color: #FFA33E; font-family: Arial Rounded MT;" >And Much More ;)</p></li>
+</ul>
+<br><br>
+
+
+<marquee> <a class="button" href="https://www.instagram.com/zi_cafe_theog/">Follow on Instagram</a>  <a class="button" href="https://www.instagram.com/zi_cafe_theog/">Ph: +91 82198 99417</a></marquee>
+
+
+<br><br><br><br>
+
   </div>
+
+  
+     <div id="total-amount" class="fixed-total">
+    Total: <span id="total-amount-value">0.00</span> Rupees
+  </div>
+  
+
+
+
+
+<div class="rounded-image">
+  <img src="room.jpg" alt="Your Photo">
+</div>
+
+
+
 
 </body>
 </html>
