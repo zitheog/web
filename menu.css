@@ -1,69 +1,162 @@
- body {
-  background-color: #331E05;
-  color: #EEAD30;
+/* Global styles */
+body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  font-size: 16px; /* Increase or decrease the base font size */
 }
 
 #header {
   text-align: center;
+  background-color: #333;
+  color: #fff;
   padding: 20px;
-  animation: fade-in 2s;
 }
 
-#header h1 {
+h1 {
   margin: 0;
-  font-size: 48px;
-  font-family: 'Playfair Display', serif;
-  animation: slide-down 1s;
+  font-size: 32px; /* Increase the heading font size */
+}
+
+p {
+  margin: 0;
+  font-size: 18px; /* Increase the paragraph font size */
+  opacity: 0.8;
+}
+
+.discount {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.discount label {
+  font-size: 18px; /* Increase the label font size */
 }
 
 #menu {
-  margin-top: 50px;
-  animation: fade-in 2s;
+  background-color: #fff;
+  padding: 20px;
 }
 
 .category {
-  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 28px; /* Increase the category heading font size */
+  margin: 10px 0;
 }
 
 .food-item {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
   padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
 }
 
 .food-item select {
-  margin-right: 10px;
+  padding: 5px;
+  font-size: 16px; /* Increase the select font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #555;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.food-item select::-ms-expand {
+  display: none;
+}
+
+.food-item select option {
+  font-size: 14px;
 }
 
 .bill-container {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #EEAD30;
-  color: #331E05;
-  max-height: auto;
-  overflow-y: auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+h3 {
+  font-size: 22px; /* Increase the bill heading font size */
+}
+
+#bill {
+  margin-bottom: 10px;
+  font-size: 18px; /* Increase the bill text font size */
 }
 
 .fixed-total {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 10px;
-  background-color: #EEAD30;
-  color: #331E05;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px; /* Increase the fixed total font size */
+  text-align: center;
+}
+
+#total-amount-value {
   font-weight: bold;
-  z-index: 9999;
 }
 
-/* Animations */
-@keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+/* Additional Styles for Food and Mountains with Animation */
+#food-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+  background-image: url('food-image.jpg'); /* Replace 'food-image.jpg' with the actual path to your food image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: fadeEffect 20s linear infinite;
 }
 
-@keyframes slide-down {
-  0% { transform: translateY(-50px); }
-  100% { transform: translateY(0); }
+#mountain-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.05;
+  background-image: url('mountain-image.jpg'); /* Replace 'mountain-image.jpg' with the actual path to your mountain image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: fadeEffect 30s linear infinite;
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.05;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
 }
