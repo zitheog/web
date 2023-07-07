@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zi Cafe - Fast Food Restaurant</title>
+
+<style>
+
+
+  body {
+  background-color: #331E05;
+  color: #EEAD30;
+  font-family: Arial, sans-serif;
+}
+
+#header {
+  text-align: center;
+  padding: 20px;
+  animation: fade-in 2s;
+}
+
+#header h1 {
+  margin: 0;
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  animation: slide-down 1s;
+}
+
+#menu {
+  margin-top: 50px;
+  animation: fade-in 2s;
+}
+
+.category {
+  margin-top: 20px;
+}
+
+.food-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.food-item select {
+  margin-right: 10px;
+}
+
+.bill-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #EEAD30;
+  color: #331E05;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.fixed-total {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #EEAD30;
+  color: #331E05;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slide-down {
+  0% { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+</style>
+
+</head>
+<body>
+  <div id="header">
+    <h1>Zi Cafe</h1>
+    <p>Fast Food Restaurant</p>
+  </div>
+
+  <div class="discount">
+    <label for="discount-checkbox">
+      <input type="checkbox" id="discount-checkbox" onchange="updateTotal()"> Apply 10% Discount
+    </label>
+  </div>
+
+  <div id="menu">
+    <!-- Menu items here -->
+  
+
+
+
+
+
+
+
+
+
+
+  <div id="menu">
+    <div class="category">
+      <h2>Beverages</h2>
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <span class="food">Coke</span>
+        <span class="price">50</span>
+      </div>
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <span class="food">Coffee</span>
+        <span class="price">80</span>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2>Snacks</h2>
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <span class="food">French Fries</span>
+        <span class="price">120</span>
+      </div>
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <span class="food">Onion Rings</span>
+        <span class="price">100</span>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2>Pizza</h2>
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <span class="food">Margherita Pizza</span>
+        <span class="price">300</span>
+      </div>
+      <div class="food-item">
+        <select onchange="updateTotal(); updateBill()">
+          <option value="0">Select Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <span class="food">Pepperoni Pizza</span>
+        <span class="price">350</span>
+      </div>
+    </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+  <div class="bill-container">
+    <h3>Show this on Counter</h3>
+    <div id="bill"></div>
+    <p>Discount Applied: <span id="discount-amount">0.00</span></p>
+    <p>Total Amount: <span id="total-amount">0.00</span> Only</p>
+  </div>
+
+  <div id="total-amount" class="fixed-total">
+    Total: <span id="total-amount-value">0.00</span> Rupees
+  </div>
+
+
+
+<script>
+
+
+// Update total amount when quantity changes
+function updateTotal() {
+  var total = 0;
+  var foodItems = document.querySelectorAll('.food-item');
+  foodItems.forEach(function(item) {
+    var quantity = parseInt(item.querySelector('select').value);
+    var price = parseFloat(item.querySelector('.price').textContent);
+    total += quantity * price;
+  });
+
+  // Apply discount if checkbox is checked
+  if (document.getElementById('discount-checkbox').checked) {
+    var discount = total * 0.1; // 10% discount
+    total -= discount;
+    document.getElementById('discount-amount').textContent = "-" + discount.toFixed(2);
+  } else {
+    document.getElementById('discount-amount').textContent = "0.00";
+  }
+
+  document.getElementById('total-amount').textContent = total.toFixed(2);
+  document.getElementById('total-amount-value').textContent = total.toFixed(2); // Added this line
+}
+
+// Update bill display
+function updateBill() {
+  var bill = '';
+  var foodItems = document.querySelectorAll('.food-item');
+  foodItems.forEach(function(item) {
+    var quantity = parseInt(item.querySelector('select').value);
+    var food = item.querySelector('.food').textContent;
+    if (quantity > 0) {
+      bill += food + ' - ' + quantity + '<br>';
+    }
+  });
+
+  document.getElementById('bill').innerHTML = bill;
+  updateTotal();
+}
+
+
+</script>
+</body>
+</html>
